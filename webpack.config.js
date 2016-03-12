@@ -11,6 +11,7 @@ module.exports = {
     app: './src/app.js'
   },
   output: {
+    // path for all production files
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
     filename: '[name].js'
@@ -39,10 +40,11 @@ module.exports = {
     })
   ],
   plugins: [
+    // concatinate all css files
     new ExtractTextPlugin('[name].css', {
       allChunks: true
     }),
-
+    // create index.html
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
