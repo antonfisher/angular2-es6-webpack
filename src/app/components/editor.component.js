@@ -19,7 +19,7 @@ import './editor.component.scss'
           <textarea #rawMarkdown (keyup)="updateValue(rawMarkdown.value)" [value]="initValue"></textarea>
           <br />
           <button class="button" (click)="savePost(rawMarkdown.value)">Save</button>
-          <button class="button" (click)="deletePost()">Delete</button>
+          <button class="button" (click)="clearPost()">Clear</button>
           <p>Result:</p>
           <div innerHtml="{{ html }}"></div>
       </div>
@@ -53,8 +53,8 @@ export class EditorComponent {
     this.postService.savePost(this.title, value)
   }
 
-  deletePost () {
-    this.postService.deletePost(this.title)
+  clearPost () {
+    this.postService.clearPost(this.title)
     this.updateValue('')
   }
 

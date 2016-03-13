@@ -1,13 +1,9 @@
-import * as marked from 'marked'
-
 export class MarkdownService {
   constructor () {
-    this.md = marked
-    this.md.setOptions({})
   }
 
   convert (value) {
-    return (value ? this.md.parse(value) : '')
+    return (value ? value.replace(/_([^_]+)_/g, '<i>$1</i>') : '')
   }
 
   setConfig (config) {
