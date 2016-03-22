@@ -1,15 +1,58 @@
-ul {
-  display: block;
-  border: 1px solid #aaa;
-  border-radius: 10px;
-  padding: 5px;
-  transform: scale(0.9);
+html, body {
+  color: #eee;
+  background-color: #111;
+  font-family: Aldrich;
+  font-size: 11px;
+}
 
-  a {
-    color: green;
-  }
+textarea {
+  font: inherit;
+  color: #eee;
+  background-color: #222;
+  height: 70px;
+  width: 98%;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #666;
 }
 
 h1 {
-  color: blue;
+  color: #ff6;
+}
+
+.search-ui {
+  margin: 5px;
+  border: solid 1px #333;
+
+  table {
+    border: none;
+    border-collapse: collapse;
+    max-width: 100px;
+
+    tr {
+      td {
+        border: 3px solid #111;
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: top;
+        text-align: center;
+        line-height: 9px;
+        width: 10px;
+        margin: 0;
+        padding: 1px;
+      }
+    }
+  }
+
+  .item {
+    background-color: darkcyan;
+  }
+
+  .item-checked {
+    background-color: darkolivegreen;
+  }
+
+  .item-result {
+    background-color: darkgoldenrod;
+  }
 }
