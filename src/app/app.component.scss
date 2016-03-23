@@ -1,58 +1,29 @@
-html, body {
-  color: #eee;
-  background-color: #111;
+body {
   font-family: Aldrich;
   font-size: 11px;
+  color: #eee;
+  background-color: #111;
+  padding: 20px 15px;
 }
 
-textarea {
-  font: inherit;
-  color: #eee;
-  background-color: #222;
-  height: 70px;
-  width: 98%;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #666;
+a, a:visited, a:active {
+  color: #99b;
+}
+a:hover {
+  color: #99f;
 }
 
 h1 {
   color: #ff6;
+  font-size: 2.5em;
+  margin: 10px 0;
 }
 
-.search-ui {
-  margin: 5px;
-  border: solid 1px #333;
+#app {
+  width: 100%;
+  height: 100%;
+}
 
-  table {
-    border: none;
-    border-collapse: collapse;
-    max-width: 100px;
-
-    tr {
-      td {
-        border: 3px solid #111;
-        white-space: nowrap;
-        overflow: hidden;
-        vertical-align: top;
-        text-align: center;
-        line-height: 9px;
-        width: 10px;
-        margin: 0;
-        padding: 1px;
-      }
-    }
-  }
-
-  .item {
-    background-color: darkcyan;
-  }
-
-  .item-checked {
-    background-color: darkolivegreen;
-  }
-
-  .item-result {
-    background-color: darkgoldenrod;
-  }
+#nav {
+  margin: 3px;
 }
