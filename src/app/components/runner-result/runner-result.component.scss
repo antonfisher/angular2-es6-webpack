@@ -1,0 +1,47 @@
+.titles-container {
+  width: 100%;
+  margin: 25px 0 10px;
+
+  label {
+    display: block;
+    float: left;
+    font-weight: bold;
+  }
+
+  .info {
+    float: right;
+
+    .done {
+      color: #ff6666
+    }
+  }
+}
+
+.source-array-items-container {
+  max-height: 120px;
+  overflow: hidden;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8em;
+
+    td {
+      font-size: 1em;
+      vertical-align: top;
+      padding: 1px;
+      margin: 1px;
+      float: left;
+      overflow: hidden;
+      word-wrap: break-word;
+      border: 1px solid #222;
+
+      div {
+        background-color: #222;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 body {
   font-family: Aldrich;
   font-size: 11px;
-  color: #eee;
+  color: #ddd;
   background-color: #111;
   padding: 20px 15px;
 }
@@ -9,6 +9,7 @@ body {
 a, a:visited, a:active {
   color: #99b;
 }
+
 a:hover {
   color: #99f;
 }
@@ -16,7 +17,7 @@ a:hover {
 h1 {
   color: #ff6;
   font-size: 2.5em;
-  margin: 10px 0;
+  margin: 10px 0 10px -2px;
 }
 
 #app {
@@ -25,5 +26,9 @@ h1 {
 }
 
 #nav {
-  margin: 3px;
+  margin: 3px 3px 30px 0;
+}
+
+.clear {
+  clear: both;
 }

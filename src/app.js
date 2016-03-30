@@ -1,3 +1,5 @@
+'use strict';
+
 import 'es6-shim';
 import 'es6-promise';
 import 'babel-polyfill';
