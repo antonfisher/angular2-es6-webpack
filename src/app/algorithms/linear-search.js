@@ -1,7 +1,9 @@
-'use strict';
+'use strict'
 
+import {Injectable} from 'angular2/core'
 import {SearchBase} from './search-base'
 
+@Injectable()
 export class LinealSearch extends SearchBase {
 
   constructor () {
@@ -9,7 +11,7 @@ export class LinealSearch extends SearchBase {
     this.title = 'Linear Search'
   }
 
-  *searchGenerator (arr, val) {
+  * searchGenerator (arr, val) {
     let index = 0
 
     while (index < arr.length) {

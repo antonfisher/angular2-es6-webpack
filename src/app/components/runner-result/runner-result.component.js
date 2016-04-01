@@ -1,14 +1,12 @@
-'use strict';
+'use strict'
 
-import {Component, View, ElementRef} from 'angular2/core'
+import {Component, ElementRef} from 'angular2/core'
 
 import './runner-result.component.scss'
 
 @Component({
   selector: 'app-runner-result',
-  inputs: ['runner', 'sourceArray']
-})
-@View({
+  inputs: ['runner', 'sourceArray'],
   template: `
     <div class="titles-container">
         <label>{{runner.title}}</label>
@@ -57,7 +55,7 @@ export class RunnerResultComponent {
 
   ngOnInit () {
     this.itemContainer = this.el.getElementsByClassName('source-array-items-container')[0]
-    this.sourceArrayUI = this.sourceArray.map(i => {
+    this.sourceArrayUI = this.sourceArray.map((i) => {
       return {
         value: i.split('').join('<br>'),
         color: this.defaultColor
@@ -66,11 +64,11 @@ export class RunnerResultComponent {
 
     this.runner.onNewSearch(this.onNewSearch, this)
     this.runner.onTick(this.onTick, this)
-    this.calculateItems();
+    this.calculateItems()
   }
 
   onResize () {
-    this.calculateItems();
+    this.calculateItems()
   }
 
   onNewSearch () {
@@ -84,7 +82,7 @@ export class RunnerResultComponent {
     this.iterationsClass = (result.done ? 'done' : '')
 
     for (let index in result.checkedItems) {
-      const colorStart = 0x99
+      const colorStart = 0x66
       const colorEnd = 0xCC
       const color = Math.round(colorStart + (colorEnd - colorStart) * index / result.checkedItems.length).toString(16)
       const itemIndex = result.checkedItems[index]

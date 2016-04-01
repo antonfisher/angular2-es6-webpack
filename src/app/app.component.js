@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-import {Component, View} from 'angular2/core'
+import {Component} from 'angular2/core'
 import {ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router'
 
 import {DashboardComponent} from './components/dashboard/dashboard.component'
@@ -8,9 +8,7 @@ import {AboutComponent} from './components/about/about.component'
 import './app.component.scss'
 
 @Component({
-  selector: 'app'
-})
-@View({
+  selector: 'app',
   directives: [ROUTER_DIRECTIVES],
   template: `
     <h1>Search Algorithms Visualizations</h1>
@@ -22,8 +20,8 @@ import './app.component.scss'
   `
 })
 @RouteConfig([
-  {path: '/', component: DashboardComponent, as: 'Dashboard'},
-  {path: '/about', component: AboutComponent, as: 'About'}
+  {path: '/', component: DashboardComponent, name: 'Dashboard', useAsDefault: true},
+  {path: '/about', component: AboutComponent, name: 'About'}
 ])
 export class AppComponent {
 }

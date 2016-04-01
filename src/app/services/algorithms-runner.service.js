@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 import {Injectable} from 'angular2/core'
 

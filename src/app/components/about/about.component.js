@@ -1,18 +1,13 @@
-'use strict';
+'use strict'
 
-import {Component, View} from 'angular2/core'
+import {Component} from 'angular2/core'
 
 @Component({
-  selector: 'app-about'
-})
-@View({
+  selector: 'app-about',
   template: `
     Hi there!
   `
 })
 export class AboutComponent {
-
-  constructor () {
-  }
 
 }

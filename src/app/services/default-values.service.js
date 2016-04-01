@@ -1,12 +1,9 @@
-'use strict';
+'use strict'
 
 import {Injectable} from 'angular2/core'
 
 @Injectable()
 export class DefaultValuesService {
-
-  constructor () {
-  }
 
   get starsArray () {
     return [
@@ -17,7 +14,7 @@ export class DefaultValuesService {
       'Libra', 'Lynx', 'Lyra', 'Octans', 'Ophiuchus', 'Orion', 'Pavo', 'Pegasus', 'Perseus', 'Phoenix', 'Pisces',
       'Piscis Austrinus', 'Puppis', 'Sagitta', 'Sagittarius', 'Scorpius', 'Serpens', 'Taurus', 'Triangulum',
       'Triangulum Australe', 'Ursa Major', 'Ursa Minor', 'Vela', 'Virgo', 'Vulpecula'
-    ].map(i => i.toLocaleLowerCase())
+    ].map((i) => i.toLocaleLowerCase()).sort()
   }
 
 }

@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-import {Component, View} from 'angular2/core'
+import {Component} from 'angular2/core'
 
 import {DefaultValuesService} from '../../services/default-values.service'
 import {AlgorithmsRunnerService} from '../../services/algorithms-runner.service'
@@ -13,9 +13,7 @@ import {InterpolationSearch} from '../../algorithms/interpolation-search'
 
 @Component({
   selector: 'app-dashboard',
-  providers: [DefaultValuesService, AlgorithmsRunnerService]
-})
-@View({
+  providers: [DefaultValuesService, AlgorithmsRunnerService],
   directives: [RunnerResultComponent],
   template: `
     <h3>Search for #{{searchIndex}} "{{searchValue}}"</h3>
@@ -39,7 +37,7 @@ export class DashboardComponent {
     AlgorithmsRunnerService.add(new BinarySearch())
     AlgorithmsRunnerService.add(new InterpolationSearch())
 
-    var runInterval = setInterval(() => {
+    setInterval(() => {
       if (AlgorithmsRunnerService.done) {
         const randomValue = this.getRandomValue(this.sourceArray)
         this.searchIndex = randomValue.index

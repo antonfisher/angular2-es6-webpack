@@ -1,7 +1,9 @@
-'use strict';
+'use strict'
 
+import {Injectable} from 'angular2/core'
 import {SearchBase} from './search-base'
 
+@Injectable()
 export class InterpolationSearch extends SearchBase {
 
   constructor () {
@@ -19,12 +21,12 @@ export class InterpolationSearch extends SearchBase {
     return res
   }
 
-  *searchGenerator (arr, val) {
-    let min = 0;
-    let max = (arr.length - 1);
+  * searchGenerator (arr, val) {
+    let min = 0
+    let max = (arr.length - 1)
 
-    const base27Arr = arr.map(i => this.toBase27(i, max))
-    const base27Val = this.toBase27(val, max);
+    const base27Val = this.toBase27(val, max)
+    const base27Arr = arr.map((i) => this.toBase27(i, max))
 
     while (val >= arr[min] && val <= arr[max] && arr[min] !== arr[max]) {
       const index = Math.round(

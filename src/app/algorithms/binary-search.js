@@ -1,7 +1,9 @@
-'use strict';
+'use strict'
 
+import {Injectable} from 'angular2/core'
 import {SearchBase} from './search-base'
 
+@Injectable()
 export class BinarySearch extends SearchBase {
 
   constructor () {
@@ -9,8 +11,8 @@ export class BinarySearch extends SearchBase {
     this.title = 'Binary Search'
   }
 
-  *searchGenerator (arr, val) {
-    let min = 0;
+  * searchGenerator (arr, val) {
+    let min = 0
     let max = (arr.length - 1)
 
     while (arr[min] < val && val < arr[max]) {
