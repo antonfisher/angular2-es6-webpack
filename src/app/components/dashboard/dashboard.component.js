@@ -39,15 +39,26 @@ export class DashboardComponent {
 
     setInterval(() => {
       if (AlgorithmsRunnerService.done) {
-        const randomValue = this.getRandomValue(this.sourceArray)
-        this.searchIndex = randomValue.index
-        this.searchValue = randomValue.value
+        //const randomValue = this.getRandomValue(this.sourceArray)
+        const nextValue = this.getNextValue(this.sourceArray)
+        this.searchIndex = nextValue.index
+        this.searchValue = nextValue.value
         AlgorithmsRunnerService.search(this.sourceArray, this.searchValue)
       }
       AlgorithmsRunnerService.tick()
-    }, 500)
+    }, 100)
 
     this.runners = AlgorithmsRunnerService.runners
+  }
+
+  getNextValue (arr) {
+    //BUG if value = 54
+    this.nextIndex = (this.nextIndex === 'undefined' || typeof arr[this.nextIndex] === 'undefined' ? 0 : this.nextIndex)
+
+    return {
+      index: this.nextIndex++,
+      value: arr[this.nextIndex]
+    }
   }
 
   getRandomValue (arr) {

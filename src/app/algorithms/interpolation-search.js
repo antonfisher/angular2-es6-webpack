@@ -13,7 +13,7 @@ export class InterpolationSearch extends SearchBase {
 
   toBase27 (val, len) {
     let res = 0
-    for (let i = 0; i < len; i++) {
+    for (let i = 0; i <= len; i++) {
       if (typeof val[i] !== 'undefined') {
         res += ((val[i] === ' ' ? 0 : (val.charCodeAt(i) - 96)) * Math.pow(27, (len - 1 - i)))
       }
