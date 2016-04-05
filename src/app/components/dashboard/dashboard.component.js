@@ -52,8 +52,10 @@ export class DashboardComponent {
   }
 
   getNextValue (arr) {
-    //BUG if value = 54
-    this.nextIndex = (this.nextIndex === 'undefined' || typeof arr[this.nextIndex] === 'undefined' ? 0 : this.nextIndex)
+    this.nextIndex = (this.nextIndex || 0)
+    if (typeof arr[this.nextIndex + 1] === 'undefined') {
+      this.nextIndex = 0
+    }
 
     return {
       index: this.nextIndex++,

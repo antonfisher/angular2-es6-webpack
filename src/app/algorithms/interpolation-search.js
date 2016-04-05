@@ -15,7 +15,7 @@ export class InterpolationSearch extends SearchBase {
     let res = 0
     for (let i = 0; i <= len; i++) {
       if (typeof val[i] !== 'undefined') {
-        res += ((val[i] === ' ' ? 0 : (val.charCodeAt(i) - 96)) * Math.pow(27, (len - 1 - i)))
+        res += ((val[i] === ' ' ? 0 : (val.charCodeAt(i) - 96)) * Math.pow(27, (len - i)))
       }
     }
     return res
@@ -25,20 +25,21 @@ export class InterpolationSearch extends SearchBase {
     let min = 0
     let max = (arr.length - 1)
 
-    const base27Val = this.toBase27(val, max)
-    const base27Arr = arr.map((i) => this.toBase27(i, max))
+    const maxLength = Math.max.apply(Math, (arr.map((i) => i.length)));
+    const toBase27 = ((i) => this.toBase27(i, maxLength))
+    const base27Val = toBase27(val)
 
     while (val >= arr[min] && val <= arr[max] && arr[min] !== arr[max]) {
       const index = Math.round(
-        min + ((base27Val - base27Arr[min]) * (max - min) / (base27Arr[max] - base27Arr[min]))
+        min + ((base27Val - toBase27(arr[min])) * (max - min) / (toBase27(arr[max]) - toBase27(arr[min])))
       )
 
       if (val === arr[index]) {
         return {checked: index}
-      } else if (base27Val < base27Arr[index]) {
+      } else if (base27Val < toBase27(arr[index])) {
         yield {checked: index}
         max = index - 1
-      } else if (base27Val > base27Arr[index]) {
+      } else if (base27Val > toBase27(arr[index])) {
         yield {checked: index}
         min = index + 1
       } else {
