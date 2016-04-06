@@ -47,7 +47,7 @@
     "postcss-loader": "0.x",
     "reflect-metadata": "0.x",
     "rimraf": "2.x",
-    "rxjs": "5.0.0-beta.4",
+    "rxjs": "5.0.0-beta.5",
     "sass-loader": "3.x",
     "snazzy": "3.x",
     "standard": "6.x",
