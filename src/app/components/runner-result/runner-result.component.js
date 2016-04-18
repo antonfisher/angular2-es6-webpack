@@ -19,7 +19,8 @@ import './runner-result.component.scss'
       <table (window:resize)="onResize()">
           <thead>
               <tr>
-                <th *ngFor="#item of sourceArrayUI; #i=index" style="width:{{itemWidth}};max-width:{{itemWidth}}px;">
+                <th *ngFor="#item of sourceArrayUI; #i=index"
+                    style="width:{{itemWidth}}px;max-width:{{itemWidth}}px;">
                     {{i}}
                 </th>
               </tr>
@@ -29,7 +30,7 @@ import './runner-result.component.scss'
                 <td *ngFor="#item of sourceArrayUI"
                     style="width:{{itemWidth}}px;max-width:{{itemWidth}}px;background-color:{{item.color}}"
                     [innerHTML]="item.value">
-                  </td>
+                -</td>
               </tr>
           </tbody>
       </table>
@@ -45,7 +46,7 @@ export class RunnerResultComponent {
 
   constructor (el) {
     this.runner = null
-    this.itemWidth = 1
+    this.itemWidth = 0
     this.iterations = 0
     this.iterationsClass = ''
     this.sourceArrayUI = []
@@ -97,7 +98,7 @@ export class RunnerResultComponent {
   }
 
   calculateItems () {
-    this.itemWidth = (this.itemContainer.clientWidth / this.sourceArray.length - 4)
+    this.itemWidth = ((this.itemContainer.clientWidth / this.sourceArray.length) - 4)
   }
 
 }
