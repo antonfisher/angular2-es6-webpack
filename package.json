@@ -5,6 +5,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/standard | ./node_modules/.bin/snazzy",
     "build": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/webpack --progress --profile",
+    "build-prod": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/webpack --optimize-minimize",
     "start": "npm run build && ./node_modules/.bin/webpack-dev-server --inline --progress --port 8080"
   },
   "standard": {
@@ -29,7 +30,7 @@
     "node": ">5"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.13",
+    "angular2": "2.0.0-beta.15",
     "autoprefixer": "6.x",
     "babel-core": "6.x",
     "babel-eslint": "6.x",
@@ -47,7 +48,7 @@
     "postcss-loader": "0.x",
     "reflect-metadata": "0.x",
     "rimraf": "2.x",
-    "rxjs": "5.0.0-beta.5",
+    "rxjs": "5.0.0-beta.6",
     "sass-loader": "3.x",
     "snazzy": "3.x",
     "standard": "6.x",
