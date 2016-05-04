@@ -39,7 +39,7 @@ export class DashboardComponent {
 
     setInterval(() => {
       if (AlgorithmsRunnerService.done) {
-        //const randomValue = this.getRandomValue(this.sourceArray)
+        // const randomValue = this.getRandomValue(this.sourceArray)
         const nextValue = this.getNextValue(this.sourceArray)
         this.searchIndex = nextValue.index
         this.searchValue = nextValue.value

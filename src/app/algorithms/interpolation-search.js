@@ -25,8 +25,8 @@ export class InterpolationSearch extends SearchBase {
     let min = 0
     let max = (arr.length - 1)
 
-    const maxLength = Math.max.apply(Math, (arr.map((i) => i.length)));
-    const toBase27 = ((i) => this.toBase27(i, maxLength))
+    const maxLength = Math.max.apply(Math, (arr.map((i) => i.length)))
+    const toBase27 = (i) => this.toBase27(i, maxLength)
     const base27Val = toBase27(val)
 
     while (val >= arr[min] && val <= arr[max] && arr[min] !== arr[max]) {
