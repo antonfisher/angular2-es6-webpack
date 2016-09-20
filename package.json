@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "./node_modules/.bin/standard | ./node_modules/.bin/snazzy",
     "build": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/webpack --progress --profile",
-    "build-prod": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/webpack --optimize-minimize",
+    "build:prod": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/webpack --optimize-minimize",
+    "copy-to-demo": "mkdir -p ../antonfisher.github.io/demo/algorithms-isualizations && cp ./dist/* ../antonfisher.github.io/demo/algorithms-isualizations",
     "start": "npm run build && ./node_modules/.bin/webpack-dev-server --inline --progress --port 8080"
   },
   "standard": {
@@ -27,7 +28,7 @@
     "webpack"
   ],
   "engines": {
-    "node": ">5"
+    "node": ">6"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.15",
@@ -49,9 +50,9 @@
     "reflect-metadata": "0.x",
     "rimraf": "2.x",
     "rxjs": "5.0.0-beta.7",
-    "sass-loader": "3.x",
-    "snazzy": "4.x",
-    "standard": "7.x",
+    "sass-loader": "4.x",
+    "snazzy": "5.x",
+    "standard": "8.x",
     "style-loader": "0.x",
     "webpack": "1.x",
     "webpack-dev-server": "1.x",
