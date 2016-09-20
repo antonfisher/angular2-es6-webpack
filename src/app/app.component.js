@@ -11,7 +11,7 @@ import './app.component.scss'
   selector: 'app',
   directives: [ROUTER_DIRECTIVES],
   template: `
-    <h1>Algorithms Visualizations</h1>
+    <h1>Algorithms Visualization</h1>
     <nav id="nav">
       <a [routerLink]="['./Dashboard']">Search algorithms</a>
       <a [routerLink]="['./About']">About</a>

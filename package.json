@@ -1,12 +1,12 @@
 {
   "name": "angular2-es6-webpack",
-  "description": "Starter Kit for Angular2 with ES6 and Webpack",
+  "description": "Starter Kit for Angular2 with ES6 and Webpack + Algorithms Visualization",
   "version": "0.1.0",
   "scripts": {
     "lint": "./node_modules/.bin/standard | ./node_modules/.bin/snazzy",
     "build": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/webpack --progress --profile",
     "build:prod": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/webpack --optimize-minimize",
-    "copy-to-demo": "mkdir -p ../antonfisher.github.io/demo/algorithms-isualizations && cp ./dist/* ../antonfisher.github.io/demo/algorithms-isualizations",
+    "copy-to-demo": "mkdir -p ../antonfisher.github.io/demo/algorithms-visualization && cp ./dist/* ../antonfisher.github.io/demo/algorithms-visualization",
     "start": "npm run build && ./node_modules/.bin/webpack-dev-server --inline --progress --port 8080"
   },
   "standard": {

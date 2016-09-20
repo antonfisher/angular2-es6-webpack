@@ -13,7 +13,7 @@ module.exports = {
   output: {
     // path for all production files
     path: path.join(__dirname, 'dist'),
-    publicPath: '/',
+    //publicPath: '/',
     filename: '[name].js'
   },
   devtool: 'inline-source-map',
